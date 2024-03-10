@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp( MiApp());
+void main() => runApp( const MiApp());
 
 class MiApp extends StatelessWidget {
   const MiApp ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title:"Mi App",
       home:Inicio(),
     );
@@ -21,12 +21,13 @@ class Inicio extends StatefulWidget {
   State<Inicio> createState() => _nameState();
 }
 
+// ignore: camel_case_types
 class _nameState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        title:Text("Sport Heart"),
+        title:const Text("Sport Heart"),
       ),
       body:cuerpo(),
     );
@@ -35,7 +36,7 @@ class _nameState extends State<Inicio> {
 
 Widget cuerpo (){
    return Container(
-    decoration: BoxDecoration( 
+    decoration: const BoxDecoration( 
     image: DecorationImage(image:AssetImage('assets/inicio1.jpg'),
     fit: BoxFit.cover
     ),
@@ -51,26 +52,26 @@ Widget login() {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          margin: EdgeInsets.only(bottom: 10.0), // Ajusta el margen inferior según sea necesario
-          padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 5.0),
+          margin: const EdgeInsets.only(bottom: 10.0), // Ajusta el margen inferior según sea necesario
+          padding: const EdgeInsets.symmetric(horizontal: 60.0, vertical: 5.0),
           decoration: BoxDecoration(
             color: Colors.orange.withOpacity(0.8),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Text(
+          child: const Text(
             "Login",
             style: TextStyle(color: Colors.white70, fontSize: 25.0),
         ),
         ),
-        SizedBox(height: 5.0), // Ajusta la altura del SizedBox según sea necesario
+        const SizedBox(height: 5.0), // Ajusta la altura del SizedBox según sea necesario
         Container(
-          margin: EdgeInsets.only(bottom: 100.0), // Ajusta el margen inferior según sea necesario
-          child: Text(
+          margin: const EdgeInsets.only(bottom: 100.0), // Ajusta el margen inferior según sea necesario
+          child: const Text(
             "¿No tienes una cuenta? Inscribirse",
             style: TextStyle(color: Colors.orange, fontSize: 18.0),
           ),
         ),
-        // Puedes agregar más Text widgets según sea necesario
+        // Puedes agregar más Text widgets según sea necesario.
       ],
     ),
   );
